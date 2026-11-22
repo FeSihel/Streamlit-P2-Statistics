@@ -6,7 +6,7 @@ import pandas as pd
 import streamlit as st
 
 st.header("Estatísticas") # Título
-st.write("Tabela", df, "Gráfico", c "Valores gerados aleatoriamente")
+st.write("Tabela", df, "Gráfico", c, "Valores gerados aleatoriamente")
 
 # Dataframes
 df = pd.DataFrame({
