@@ -6,13 +6,13 @@ import pandas as pd
 import streamlit as st
 
 st.header("Estatísticas") # Título
+st.write("Tabela", df, "Gráfico", c "Valores gerados aleatoriamente")
 
 # Dataframes
 df = pd.DataFrame({
     "1a coluna": ["1A", "2A", "3A", "4A"],
     "2a coluna": ["1B", "2B", "3B", "4B"],
 })
-st.write(df)
 
 # Gráficos de pontos, valores gerados aleatoriamente.
 df2 = pd.DataFrame(
@@ -20,4 +20,3 @@ df2 = pd.DataFrame(
     columns=["a", "b", "c"])
 c = alt.Chart(df2).mark_circle().encode(
         x="a", y="b", size="c", color="c", tooltip=["a", "b", "c"])
-st.write(c)
