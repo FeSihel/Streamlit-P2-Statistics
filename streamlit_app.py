@@ -5,7 +5,7 @@ import altair as alt
 import pandas as pd
 import streamlit as st
 
-st.header("Estatísticas") # Título
+st.header("Estatísticas (dia 5)")
 
 # Dataframes
 df = pd.DataFrame({
@@ -20,3 +20,13 @@ df2 = pd.DataFrame(
 c = alt.Chart(df2).mark_circle().encode(x="a", y="b", size="c", color="c", tooltip=["a", "b", "c"])
 
 st.write("Tabela", df, "Gráfico", c, "Valores gerados aleatoriamente")
+
+# Dia 9: st.line_chart
+st.header("Gráfico de linhas (dia 9)")
+
+chart_data = pd.DataFrame(
+    np.random.randn(20, 3),
+    columns = ["a", "b", "c"]
+)
+st.line_chart(chart_data)
+st.write("Valores também gerados aleatóriamente")
